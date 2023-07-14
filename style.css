@@ -23,7 +23,7 @@ a, a:link, a:visited {
 }
 
 #social-media {
-    margin-top: 2EM;
+    margin-top: 2em;
 }
 
 #about p {
@@ -84,7 +84,7 @@ header > div {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    font-size: clamp(0.8rem, 0.2958rem + 2.2535vw, 2rem);
+    font-size: clamp(0.7rem, 0.2958rem + 2.2535vw, 1.8rem);
     background-color: #578D95;
     min-width: auto;
     height: 100%;
