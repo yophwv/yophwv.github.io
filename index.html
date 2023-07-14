@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Doh</title>
+    <script type="text/javascript" src="chocolat.js"></script>
+    <link rel="stylesheet" href="chocolat.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <!-- START GOOGLE FONT IMPORT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Harmattan&family=Truculenta:wght@400;700&family=Wire+One&display=swap" rel="stylesheet">
+    <!-- END GOOGLE FONT IMPORT -->
+</head>
+<body class="landingBody">
+    <a id="hamburger" href="#" onclick="toggleHeader()"><img src="./images/hamburger.svg"></a> 
+    <header class="landingHeader">
+        <div class="landing">
+            <h1>AMY DOH</h1>
+            <nav>
+                <a id="portfolioLink" onclick="shiftLeft('portfolio')" href="#">PORTFOLIO</a>
+                <div style="display: none;" id="portfolio-categories">
+                    <ul class="dashed">
+                        <li><a href="#">General</a></li>
+                        <li><a href="#">Book Illustration</a></li>
+                        <li><a href="#">Animation</a></li>
+                        <li><a href="#">Sketches</a></li>
+                    </ul>
+                </div>
+                <a id="aboutLink" onclick="shiftLeft('about')" href="#">ABOUT</a>
+                <a style="display: none;" id="contactLink" href="mailto:yophwv@gmail.com">CONTACT</a>
+            </nav>
+            <div style="display: none;" id="social-media">
+                <a target="_blank" href="https://www.instagram.com/yophwv/"><img src="./images/instagram.svg"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/amy-doh-012812254/"><img src="./images/linkedin.svg"></a>
+            </div>
+        </div>
+    </header>
+    <main id="mainContent" class="landingMain">
+        <article style="display: none;" id="portfolio">
+            <section>
+                <h2>2023</h2>
+                <div class="chocolat-parent">
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                </div>
+            </section>
+            <section>
+                <h2>2022</h2>
+                <div class="chocolat-parent">
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                </div>
+            </section>
+            <section>
+                <h2>2021</h2>
+                <div class="chocolat-parent">
+                    <a href="images/amy.png" class="chocolat-image">
+                        <img src="images/amy.png">
+                    </a>
+                    <a href="images/test.jpg" class="chocolat-image">
+                        <img src="images/test.jpg">
+                    </a>
+                    <a href="images/test2.jpg" class="chocolat-image">
+                        <img src="images/test2.jpg">
+                    </a>
+                </div>
+            </section>
+        </article>
+        <article style="display: none;" id="about">
+            <img style="width: 270px; height: 270px;" src='./images/profile.png'>
+            <div>
+                <p style="margin-bottom: 2em;">
+                    Hello!<br>
+                    My name is Amy Doh and I am a Toronto-based illustrator from Korea.<br>
+                    I started my journey of passion with book illustration, but I also love working in various different illustrations alongside with animation.<br><br>
+
+                    My specialties are:<br><br>
+                    -Book illustration<br>
+                    -Cover illustration for various media<br>
+                    -Editorial/commercial illustration<br>
+                    -Animated illustration<br>
+                    -Character design<br>
+                </p>
+                <hr>
+                <p style="margin-top: 2em;">
+                    I always love a new creative story to work with! To contact me, visit my instagram or email me at yophwv@gmail.com, or contact me through the website.
+                </p>
+            </div>
+        </article>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'), {
+                loop: true,
+            })
+        })
+
+        var isShifted = false;
+        var isMobile = false;
+
+        var isToggled = false;
+
+        const landingElement = document.getElementsByClassName("landing")[0];
+        const landingNav = document.getElementsByTagName("nav")[0];
+        const landingHeader = document.getElementsByTagName("header")[0];
+
+        const main = document.getElementById("mainContent");
+        
+        function shiftLeft(nameOfSectionToAppear) {
+            if (!isShifted) {
+                // Do animation
+                if (window.innerWidth >= 650)
+                    document.body.className = "shift";
+                else {
+                    document.body.className = "";
+
+                    main.className = "displayMain";
+
+                    var delay = 0;
+                    const sections = document.getElementsByTagName('section');
+                    for (const section of sections) {
+                        section.classList.add("fade-in");
+                        section.style.animationDelay = "" + delay + "s";
+                        delay += 0.2;
+                    }
+                    document.body.className = "";
+                    document.getElementById("contactLink").style.display = "block";
+                }
+                landingElement.className = "";
+                landingHeader.className = "hideHeader";
+
+                document.body.addEventListener("animationend", () => {
+                    main.className = "displayMain";
+
+                    var delay = 0;
+                    const sections = document.getElementsByTagName('section');
+                    for (const section of sections) {
+                        section.classList.add("fade-in");
+                        section.style.animationDelay = "" + delay + "s";
+                        delay += 0.2;
+                    }
+                    document.body.className = "";
+                    document.getElementById("contactLink").style.display = "block";
+                    document.getElementById("social-media").style.display = "block";
+                })
+
+                isShifted = true;
+            }
+
+            switch (nameOfSectionToAppear) {
+                case 'portfolio':
+                    document.getElementById('aboutLink').style.fontWeight = 'normal';
+                    document.getElementById('about').style.display = 'none';
+
+                    document.getElementById('portfolioLink').style.fontWeight = 'bold';
+                    document.getElementById('portfolio-categories').style.display = 'block';
+                    document.getElementById('portfolio').style.display = 'block';
+                    break;
+                case 'about':
+                    document.getElementById('portfolioLink').style.fontWeight = 'normal';
+                    document.getElementById('portfolio-categories').style.display = 'none';
+                    document.getElementById('portfolio').style.display = 'none';
+
+                    document.getElementById('aboutLink').style.fontWeight = 'bold';
+                    document.getElementById('about').style.display = 'block';
+                    break;
+            }
+        }
+        
+        function toggleHeader() {
+            if (isToggled) {
+                document.body.className = "hideHeader";
+            }
+            else {
+                document.body.className = "hideMain";
+            }
+            isToggled = !isToggled;
+        }
+    </script>
+</body>
+</html>

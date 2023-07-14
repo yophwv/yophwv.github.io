@@ -1,0 +1,263 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+a, a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    font-family: 'Truculenta', sans-serif;
+}
+
+#about {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+    min-height: 100vh;
+    padding: 3em 1.5em;
+}
+
+#social-media {
+    margin-top: 5em;
+}
+
+#about p {
+    font-family: 'Harmattan', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: white;
+}
+
+body {
+    background-color: white;
+    background-image: none;;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 0fr 1fr 4fr;
+    grid-template-rows: 0fr 1fr 0fr;
+    grid-template-areas: ". . ." ". header main" ". . .";
+    color: white;
+    min-height: 100vh;
+}
+
+.landingBody {
+    background-image: url("images/space-sea-background.png");
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: ". . ." ". header ." ". . .";
+}
+
+.landingBody > #hamburger {
+    display: none;
+}
+
+header {
+    grid-area: header;
+}
+
+.landingHeader {
+    display: block;
+}
+
+.landingMain {
+    display: none;
+}
+
+nav > a:not(:first-child) {
+    margin-top: 0.4em;
+}
+
+#hamburger {
+    display: none;
+}
+
+header > div {
+    background-image: url("images/landing-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(0.8rem, 0.2958rem + 2.2535vw, 2rem);
+    background-color: #578D95;
+    min-width: auto;
+    height: 100%;
+    clip-path: none;
+    padding: 1.5em 1em;
+}
+
+header > div > h1 {
+    font-family: 'Wire One', sans-serif;
+    margin-top: 1em;
+}
+
+header > div > nav {
+    display: flex;
+    margin-top: 2em;
+    flex-direction: column;
+}
+
+#portfolio-categories > ul.dashed {
+    list-style-type: none;
+    margin-left: 1em;
+}
+#portfolio-categories > ul.dashed > li {
+    text-indent: -5px;
+}
+#portfolio-categories > ul.dashed > li:before {
+    content: "-";
+    text-indent: -5px;
+}
+
+.landing {
+    clip-path: path('M597 0H71L23 23L0 293L131 390L587 374L620 222L597 0Z');
+    height: 389px;
+    min-width: 620px;
+    justify-content: center;
+    background-color: none;
+    align-items: center;
+    padding-left: 0em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+
+.landing > h1 {
+    font-size: 128px;
+    margin-top: 0em;
+}
+
+.landing > nav {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+.landing > nav > a:not(:first-child) {
+    margin-top: 0em;
+    padding-left: 1em;
+}
+
+main {
+    grid-area: main;
+}
+
+section:not(:first-child) {
+    padding-top: 1em;
+}
+
+section {
+    padding: 0.2em 1em;
+    background: white;
+    opacity: 0;
+}
+
+section > h2 {
+    color: grey;
+}
+
+section > div {
+    margin-top: 0.8em;
+}
+
+.fade-in {
+    animation-name: "fadeIn";
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.chocolat-parent > a > img {
+    height: 12vw;
+    width: 12vw;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: all 0.3s;
+} 
+
+.chocolat-parent > a > img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.shift {
+    animation-name: "shift";
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes shift {
+    0% {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    100% {
+        grid-template-columns: 0fr 1fr 4fr;
+        grid-template-rows: 0fr 1fr 0fr;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .chocolat-parent > a > img {
+        height: 16vw;
+        width: 16vw;
+    } 
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        grid-template-columns: 0fr 0fr 1fr;
+        grid-template-areas: ". . ." ". . main" ". . .";
+    }
+
+    #hamburger {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 1%;
+        left: 1%;
+    }
+
+    #hamburger > img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hideHeader {
+        grid-template-areas: ". . ." ". . main" ". . .";
+    }
+
+    .hideHeader header {
+        display: none;
+    }
+
+    .hideMain {
+        grid-template-areas: ". . ." ". . header" ". . .";
+    }
+
+    .hideMain main {
+        display: none;
+    }
+
+    main {
+        margin-left: 0px;
+        margin-top: 4em;
+    }
+
+    .chocolat-parent > a > img {
+        height: 25vw;
+        width: 25vw;
+    }
+}
