@@ -40,7 +40,7 @@ body {
     background-image: none;;
     background-size: cover;
     display: grid;
-    grid-template-columns: 0fr 1fr 4fr;
+    grid-template-columns: 0fr minmax(300px, 1fr) 4fr;
     grid-template-rows: 0fr 1fr 0fr;
     grid-template-areas: ". . ." ". header main" ". . .";
     color: white;
@@ -91,6 +91,7 @@ header > div {
     height: 100%;
     clip-path: none;
     padding-left: 1em;
+    padding-top: 1em;
 }
 
 header > div > h1 {
@@ -148,6 +149,10 @@ main {
     grid-area: main;
 }
 
+#portfolio {
+    padding: 2em 1.5em;
+}
+
 section:not(:first-child) {
     padding-top: 1em;
 }
@@ -160,6 +165,13 @@ section {
 
 section > h2 {
     color: grey;
+    font-family: 'Wire One', sans-serif;
+    font-size: clamp(2rem, 0.2958rem + 2.2535vw, 3rem);
+    margin-bottom: 1.2em;
+}
+
+article section {
+    margin-bottom: 1.2em;
 }
 
 section > div {
@@ -217,7 +229,11 @@ section > div {
     .chocolat-parent > a > img {
         height: 16vw;
         width: 16vw;
-    } 
+    }
+
+    body {
+        grid-template-columns: 0fr minmax(250px, 1fr) 4fr;
+    }
 }
 
 @media screen and (max-width: 650px) {
