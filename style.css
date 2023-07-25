@@ -31,13 +31,26 @@ a, a:link, a:visited {
     font-family: 'Harmattan', sans-serif;
 }
 
+button {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Truculenta', sans-serif;
+    font-size: 24px;
+}
+
 h1, h2, h3, h4 {
     color: white;
 }
 
 body {
     background-color: white;
-    background-image: none;;
+    background-image: none;
     background-size: cover;
     display: grid;
     grid-template-columns: 0fr minmax(300px, 1fr) 4fr;
