@@ -20,13 +20,13 @@
         <div class="landing">
             <h1>AMY DOH</h1>
             <nav>
-                <a id="portfolioLink" onclick="shiftLeft('portfolio')" href="#">PORTFOLIO</a>
+                <a id="portfolioLink" onclick="shiftLeft('portfolio'); filterImages('', true)" href="#">PORTFOLIO</a>
                 <div style="display: none;" id="portfolio-categories">
                     <ul class="dashed">
-                        <li><button onclick="filterImages('general')">GENERAL</button></li>
-                        <li><button onclick="filterImages('illustration')">BOOK ILLUSTRATION</button></li>
-                        <li><button onclick="filterImages('animation')">ANIMATION</button></li>
-                        <li><button onclick="filterImages('sketches')">SKETCHES</button></li>
+                        <li><button id="general" onclick="filterImages('general')">GENERAL</button></li>
+                        <li><button id="illustration" onclick="filterImages('illustration')">BOOK ILLUSTRATION</button></li>
+                        <li><button id="animation" onclick="filterImages('animation')">ANIMATION</button></li>
+                        <li><button id="sketches" onclick="filterImages('sketches')">SKETCHES</button></li>
                     </ul>
                 </div>
                 <a id="aboutLink" onclick="shiftLeft('about')" href="#">ABOUT</a>
@@ -227,7 +227,7 @@
                     var delay = 0;
                     const sections = document.getElementsByTagName('section');
                     for (const section of sections) {
-                        section.classList.add("fade-in");
+                        section.classList.toggle("fade-in");
                         section.style.animationDelay = "" + delay + "s";
                         delay += 0.2;
                         
@@ -269,8 +269,13 @@
         }
     
         function filterImages(categoryName) {
+            for (const b of document.getElementsByTagName('button')) {
+                b.style.fontWeight = 'normal';
+            }
+
             switch (categoryName) {
                 case 'general': case 'illustration': case 'animation': case 'sketches':
+                    document.getElementById(categoryName).style.fontWeight = 'bold';
                     filterSections(categoryName);
                     break;
                 default:
@@ -280,7 +285,14 @@
         }
 
         function filterSections(categoryName, showAllFlag = false) {
+            // Make all sections not appear first
+            for (const section of sections) {
+                section.classList.remove("fade-in");
+                section.style.opacity = 1;
+                section.style.display = "none";
+            }
             
+            // Then toggle sections on depending on if they have images or not
             for (const section of sections) {
                 const gallerySection = section.getElementsByClassName("chocolat-parent")[0];
                 var hasCategory = false;
