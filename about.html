@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Doh</title>
+    <script type="text/javascript" src="chocolat.js"></script>
+    <link rel="stylesheet" href="chocolat.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <!-- START GOOGLE FONT IMPORT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Harmattan&family=Truculenta:wght@400;700&family=Wire+One&display=swap"
+        rel="stylesheet">
+    <!-- END GOOGLE FONT IMPORT -->
+</head>
+
+<body>
+    <a id="hamburger" href="#" onclick="toggleHeader()"><img loading="lazy" src="./images/hamburger.svg"></a>
+    <header>
+        <div>
+            <a href="index.html"><h1>Amy Doh</h1></a>
+            <nav>
+                <a id="portfolioLink" onclick="filterImages('', true)" href="index.html">PORTFOLIO</a>
+                <a id="aboutLink" style="text-decoration: underline;" href="#">ABOUT</a>
+                <a id="contactLink" href="mailto:yophwv@gmail.com">CONTACT</a>
+                <div id="social-media">
+                    <a target="_blank" href="https://www.instagram.com/yophwv/"><img loading="lazy"
+                            src="./images/instagram.svg"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/amy-doh-012812254/"><img loading="lazy"
+                            src="./images/linkedin.svg"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="mainContent" class="landingMain">
+        <article id="about">
+            <img loading="lazy" style="width: 179px; height: 259px;" src='./images/profile.png'>
+            <div>
+                <p>My name is Amy Doh and I am a digital illustrator from Korea with a focus on story-driven, scientific-based digital illustrations.</p>
+                <p>I was raised by scientists who kept me inspired by the wonders and advancements of science. This led me to have a great desire to illustrate complex scientific theories such that non-experts and academics alike can approach and appreciate my work in their own way.</p>
+                <p>Since then, my interests expanded to book illustrations, capturing nuances and positive emotion to visually-inspire readers.</p>
+                <p>My art delivers a unique experience to the audience, derived from heavy-research and utilization of complex emotions, such as melancholy and inquisitiveness, to express my thoughts on the world.</p>
+                <p>Currently, I am finishing a passion project at OCAD which utilizes the scientific theories around the laws of entropy to understand the concept of death in a new way. See you at GradX2024!</p>
+                <p>I always love a new creative story to work with! To contact me, visit my instagram, email me at <span style="text-decoration: underline; font-family: 'Harmattan', sans-serif;">yophwv@gmail.com</span>, or contact me through the website.
+                </p>
+            </div>
+        </article>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'), {
+                loop: true,
+            })
+        })
+
+        var isToggled = false;
+
+        const landingNav = document.getElementsByTagName("nav")[0];
+        const landingHeader = document.getElementsByTagName("header")[0];
+
+        const main = document.getElementById("mainContent");
+        const portfolio = document.getElementById("portfolio");
+        const sections = portfolio.getElementsByTagName('section');
+
+        function filterImages(categoryName) {
+            for (const b of document.getElementsByTagName('button')) {
+                b.style.fontWeight = 'normal';
+            }
+
+            switch (categoryName) {
+                case 'general': case 'illustration': case 'animation': case 'sketches':
+                    document.getElementById(categoryName).style.fontWeight = 'bold';
+                    filterSections(categoryName);
+                    break;
+                default:
+                    filterSections(categoryName, true);
+                    break;
+            }
+        }
+
+        function filterSections(categoryName, showAllFlag = false) {
+            // Make all sections not appear first
+            for (const section of sections) {
+                section.classList.remove("fade-in");
+                section.style.opacity = 1;
+                section.style.display = "none";
+            }
+
+            // Then toggle sections on depending on if they have images or not
+            for (const section of sections) {
+                const gallerySection = section.getElementsByClassName("chocolat-parent")[0];
+                var hasCategory = false;
+
+                for (const image of gallerySection.children) {
+                    if (showAllFlag) {
+                        image.style.display = "inline";
+                        hasCategory = true;
+                    }
+                    else if (!image.classList.contains(categoryName)) {
+                        image.style.display = "none";
+                    }
+                    else {
+                        image.style.display = "inline";
+                        hasCategory = true;
+                    }
+                }
+
+                if (!hasCategory) section.style.display = "none";
+                else section.style.display = "block";
+            }
+        }
+        filterImages('', true);
+    </script>
+</body>
+
+</html>

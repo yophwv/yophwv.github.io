@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,40 +12,47 @@
     <!-- START GOOGLE FONT IMPORT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Harmattan&family=Truculenta:wght@400;700&family=Wire+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Harmattan&family=Truculenta:wght@400;700&family=Wire+One&display=swap"
+        rel="stylesheet">
     <!-- END GOOGLE FONT IMPORT -->
 </head>
-<body class="landingBody">
-    <a id="hamburger" href="#" onclick="toggleHeader()"><img loading="lazy" src="./images/hamburger.svg"></a> 
-    <header class="landingHeader">
-        <div class="landing">
-            <h1>AMY DOH</h1>
+
+<body>
+    <a id="hamburger" href="#" onclick="toggleHeader()"><img loading="lazy" src="./images/hamburger.svg"></a>
+    <header>
+        <div>
+            <a href="#"><h1>Amy Doh</h1></a>
             <nav>
-                <a id="portfolioLink" onclick="shiftLeft('portfolio'); filterImages('', true)" href="#">PORTFOLIO</a>
-                <div style="display: none;" id="portfolio-categories">
+                <a id="portfolioLink" style="text-decoration: underline;" onclick="filterImages('', true)" href="#">PORTFOLIO</a>
+                <div id="portfolio-categories">
                     <ul class="dashed">
                         <li><button id="general" onclick="filterImages('general')">GENERAL</button></li>
-                        <li><button id="illustration" onclick="filterImages('illustration')">BOOK ILLUSTRATION</button></li>
+                        <li><button id="illustration" onclick="filterImages('illustration')">BOOK ILLUSTRATION</button>
+                        </li>
                         <li><button id="animation" onclick="filterImages('animation')">ANIMATION</button></li>
                         <li><button id="sketches" onclick="filterImages('sketches')">SKETCHES</button></li>
                     </ul>
                 </div>
-                <a id="aboutLink" onclick="shiftLeft('about')" href="#">ABOUT</a>
-                <a style="display: none;" id="contactLink" href="mailto:yophwv@gmail.com">CONTACT</a>
-                <div style="display: none;" id="social-media">
-                    <a target="_blank" href="https://www.instagram.com/yophwv/"><img loading="lazy" src="./images/instagram.svg"></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/amy-doh-012812254/"><img loading="lazy" src="./images/linkedin.svg"></a>
+                <a id="aboutLink" href="about.html">ABOUT</a>
+                <a id="contactLink" href="mailto:yophwv@gmail.com">CONTACT</a>
+                <div id="social-media">
+                    <a target="_blank" href="https://www.instagram.com/yophwv/"><img loading="lazy"
+                            src="./images/instagram.svg"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/amy-doh-012812254/"><img loading="lazy"
+                            src="./images/linkedin.svg"></a>
                 </div>
             </nav>
         </div>
     </header>
     <main id="mainContent" class="landingMain">
-        <article style="display: none;" id="portfolio">
+        <article id="portfolio">
             <section>
                 <h2>2023</h2>
                 <div class="chocolat-parent">
-                    <a href="images/2023/Save the Mountain Gorillas_EarthDay2023 (2023).jpg" class="chocolat-image general">
-                        <img loading="lazy" src="images/2023/Save the Mountain Gorillas_EarthDay2023 (2023).jpg">
+                    <a href="images/2023/Save the Mountain Gorillas_EarthDay2023 (2023).jpg"
+                        class="chocolat-image general">
+                        <img src="images/2023/Save the Mountain Gorillas_EarthDay2023 (2023).jpg">
                     </a>
                     <a href="images/2023/The Black Cat bookillu (2023).jpg" class="chocolat-image illustration">
                         <img loading="lazy" src="images/2023/The Black Cat bookillu (2023).jpg">
@@ -52,7 +60,8 @@
                     <a href="images/2023/The Hobbit bookillu (2023).jpg" class="chocolat-image illustration">
                         <img loading="lazy" src="images/2023/The Hobbit bookillu (2023).jpg">
                     </a>
-                    <a href="images/2023/The Merpeople's Tale bookillu (2023)_original story.jpg" class="chocolat-image illustration">
+                    <a href="images/2023/The Merpeople's Tale bookillu (2023)_original story.jpg"
+                        class="chocolat-image illustration">
                         <img loading="lazy" src="images/2023/The Merpeople's Tale bookillu (2023)_original story.jpg">
                     </a>
                     <a href="images/2023/The Snake Husband_cover(2023).jpg" class="chocolat-image illustration">
@@ -146,9 +155,9 @@
                     <a href="images/2018/Barcelona 1 (2018).jpg" class="chocolat-image general">
                         <img loading="lazy" src="images/2018/Barcelona 1 (2018).jpg">
                     </a>
-                <a href="images/2018/Barcelona 2 (2018).jpg" class="chocolat-image general">
-                    <img loading="lazy" src="images/2018/Barcelona 2 (2018).jpg">
-                </a>
+                    <a href="images/2018/Barcelona 2 (2018).jpg" class="chocolat-image general">
+                        <img loading="lazy" src="images/2018/Barcelona 2 (2018).jpg">
+                    </a>
                 </div>
             </section>
         </article>
@@ -158,7 +167,8 @@
                 <p style="margin-bottom: 2em;">
                     Hello!<br>
                     My name is Amy Doh and I am a Toronto-based illustrator from Korea.<br>
-                    I started my journey of passion with book illustration, but I also love working in various different illustrations alongside with animation.<br><br>
+                    I started my journey of passion with book illustration, but I also love working in various different
+                    illustrations alongside with animation.<br><br>
 
                     My specialties are:<br><br>
                     -Book illustration<br>
@@ -169,105 +179,28 @@
                 </p>
                 <hr>
                 <p style="margin-top: 2em;">
-                    I always love a new creative story to work with! To contact me, visit my instagram, email me at yophwv@gmail.com, or contact me through the website.
+                    I always love a new creative story to work with! To contact me, visit my instagram, email me at
+                    yophwv@gmail.com, or contact me through the website.
                 </p>
             </div>
         </article>
     </main>
     <script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
+        document.addEventListener("DOMContentLoaded", function (event) {
             Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'), {
                 loop: true,
             })
         })
 
-        var isShifted = false;
-        var isMobile = false;
-
         var isToggled = false;
 
-        const landingElement = document.getElementsByClassName("landing")[0];
         const landingNav = document.getElementsByTagName("nav")[0];
         const landingHeader = document.getElementsByTagName("header")[0];
 
         const main = document.getElementById("mainContent");
         const portfolio = document.getElementById("portfolio");
         const sections = portfolio.getElementsByTagName('section');
-        
-        function shiftLeft(nameOfSectionToAppear) {
-            landingHeader.className = "";
-            landingElement.className = "";
 
-            if (!isShifted) {
-                // Do animation
-                if (window.innerWidth >= 650) {
-                    document.body.addEventListener("animationend", (event) => {
-                        if (event.animationName === "shift") {
-                            main.className = "displayMain";
-                        
-                            var delay = 0;
-                            const sections = document.getElementsByTagName('section');
-                            for (const section of sections) {
-                                section.classList.add("fade-in");
-                                section.style.animationDelay = "" + delay + "s";
-                                delay += 0.2;
-                            }
-                            document.body.className = "hideHeader";
-                            document.getElementById("contactLink").style.display = "block";
-                            document.getElementById("social-media").style.display = "block";
-                        }
-                    })
-
-                    document.body.className = "shift";
-                    isShifted = true;
-                }
-                else {
-                    main.className = "displayMain";
-
-                    var delay = 0;
-                    const sections = document.getElementsByTagName('section');
-                    for (const section of sections) {
-                        section.classList.toggle("fade-in");
-                        section.style.animationDelay = "" + delay + "s";
-                        delay += 0.2;
-                        
-                    }
-                    document.body.className = "hideHeader";
-                    document.getElementById("contactLink").style.display = "block";
-                    isShifted = true;
-                }
-            }
-
-            switch (nameOfSectionToAppear) {
-                case 'portfolio':
-                    document.getElementById('aboutLink').style.fontWeight = 'normal';
-                    document.getElementById('about').style.display = 'none';
-
-                    document.getElementById('portfolioLink').style.fontWeight = 'bold';
-                    document.getElementById('portfolio-categories').style.display = 'block';
-                    document.getElementById('portfolio').style.display = 'block';
-                    break;
-                case 'about':
-                    document.getElementById('portfolioLink').style.fontWeight = 'normal';
-                    document.getElementById('portfolio-categories').style.display = 'none';
-                    document.getElementById('portfolio').style.display = 'none';
-
-                    document.getElementById('aboutLink').style.fontWeight = 'bold';
-                    document.getElementById('about').style.display = 'block';
-                    break;
-            }
-        }
-        
-        function toggleHeader() {
-            if (isToggled) {
-                document.body.className = "hideHeader";
-            }
-            else {
-                document.body.className = "hideMain";
-            }
-            isToggled = !isToggled;
-        }
-    
         function filterImages(categoryName) {
             for (const b of document.getElementsByTagName('button')) {
                 b.style.fontWeight = 'normal';
@@ -291,7 +224,7 @@
                 section.style.opacity = 1;
                 section.style.display = "none";
             }
-            
+
             // Then toggle sections on depending on if they have images or not
             for (const section of sections) {
                 const gallerySection = section.getElementsByClassName("chocolat-parent")[0];
@@ -315,6 +248,8 @@
                 else section.style.display = "block";
             }
         }
+        filterImages('', true);
     </script>
 </body>
+
 </html>
